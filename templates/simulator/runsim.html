@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{simulation.hometeam}} VS {{simulation.awayteam}}</h1>
+    <h2> {{simulation.hometeamscore}} to {{simulation.awayteamscore}} </h2>
+
+    <table>
+      <tr>
+        <td>Team</td>
+        <td>Rush Attempts</td>
+        <td>Rush Yards</td>
+        <td>Rush TDS</td>
+        <td>Pass Completions</td>
+        <td>Pass Attempts</td>
+        <td>Pass Yards</td>
+        <td>Pass TDs</td>
+        <td>Interceptions</td>
+        <td>Sacks Allowed</td>
+        <td>Sack Yards</td>
+        <td>Fumbles</td>
+        <td>Time of Possession</td>
+      </tr>
+      <tr>
+        <td>{{simulation.hometeam}}</td>
+        <td>{{simulation.homestatline["Rush_Attempts"]}}</td>
+        <td>{{simulation.homestatline["Rush_Yards"]}}</td>
+        <td>{{simulation.homestatline["Rush_TDs"]}}</td>
+        <td>{{simulation.homestatline["Passing_Completions"]}}</td>
+        <td>{{simulation.homestatline["Passing_Attempts"]}}</td>
+        <td>{{simulation.homestatline["Pass_Yards"]}}</td>
+        <td>{{simulation.homestatline["Pass_TDs"]}}</td>
+        <td>{{simulation.homestatline["Interceptions"]}}</td>
+        <td>{{simulation.homestatline["Sacks_Allowed"]}}</td>
+        <td>{{simulation.homestatline["Sacked_Yards"]}}</td>
+        <td>{{simulation.homestatline["Fumbles"]}}</td>
+        <td>{{simulation.homestatline["Time_Of_Possession"]}}</td>
+      </tr>
+      <tr>
+        <td>{{simulation.awayteam}}</td>
+        <td>{{simulation.awaystatline["Rush_Attempts"]}}</td>
+        <td>{{simulation.awaystatline["Rush_Yards"]}}</td>
+        <td>{{simulation.awaystatline["Rush_TDs"]}}</td>
+        <td>{{simulation.awaystatline["Passing_Completions"]}}</td>
+        <td>{{simulation.awaystatline["Passing_Attempts"]}}</td>
+        <td>{{simulation.awaystatline["Pass_Yards"]}}</td>
+        <td>{{simulation.awaystatline["Pass_TDs"]}}</td>
+        <td>{{simulation.awaystatline["Interceptions"]}}</td>
+        <td>{{simulation.awaystatline["Sacks_Allowed"]}}</td>
+        <td>{{simulation.awaystatline["Sacked_Yards"]}}</td>
+        <td>{{simulation.awaystatline["Fumbles"]}}</td>
+        <td>{{simulation.awaystatline["Time_Of_Possession"]}}</td>
+      </tr>
+    </table>
+{% endblock %}

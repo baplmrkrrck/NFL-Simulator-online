@@ -1,0 +1,28 @@
+{% extends "loginbase.html" %}
+
+{% block content %}
+    <h1>Login</h1>
+	{% if msg %}
+      <div id="loginmsg">
+
+		{{ msg }}
+
+	  </div>
+    {% endif %}
+
+		<form action="login" method="POST">
+
+			username:<br>
+			<input type="text" name="username" /><br><br>
+
+			Password:<br>
+			<input type="password" name="password" /><br><br>
+
+
+			<input type="submit" value="Login"/>
+
+		</form>
+    <form action="/newuser" method="GET">
+      <input type="submit" value="New User"/>
+    </form>
+{% endblock %}

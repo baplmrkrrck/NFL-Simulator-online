@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{stats[0]["Team_Name"]}} VS {{stats[0]["Team_Name"]}}</h1>
+    <h2> {{homescore}} to {{awayscore}} </h2>
+
+    <table>
+      <tr>
+        <td>Team</td>
+        <td>Rush Attempts</td>
+        <td>Rush Yards</td>
+        <td>Rush TDS</td>
+        <td>Pass Completions</td>
+        <td>Pass Attempts</td>
+        <td>Pass Yards</td>
+        <td>Pass TDs</td>
+        <td>Interceptions</td>
+        <td>Sacks Allowed</td>
+        <td>Sack Yards</td>
+        <td>Fumbles</td>
+        <td>Time of Possession</td>
+      </tr>
+      <tr>
+        <td>{{stats[0]["Team_Name"]}}</td>
+        <td>{{stats[0]["Rush_Attempts"]}}</td>
+        <td>{{stats[0]["Rush_Yards"]}}</td>
+        <td>{{stats[0]["Rush_TDs"]}}</td>
+        <td>{{stats[0]["Passing_Completions"]}}</td>
+        <td>{{stats[0]["Passing_Attempts"]}}</td>
+        <td>{{stats[0]["Pass_Yards"]}}</td>
+        <td>{{stats[0]["Pass_TDs"]}}</td>
+        <td>{{stats[0]["Interceptions"]}}</td>
+        <td>{{stats[0]["Sacks_Allowed"]}}</td>
+        <td>{{stats[0]["Sacked_Yards"]}}</td>
+        <td>{{stats[0]["Fumbles"]}}</td>
+        <td>{{stats[0]["Time_Of_Possession"]}}</td>
+      </tr>
+      <tr>
+        <td>{{stats[1]["Team_Name"]}}</td>
+        <td>{{stats[1]["Rush_Attempts"]}}</td>
+        <td>{{stats[1]["Rush_Yards"]}}</td>
+        <td>{{stats[1]["Rush_TDs"]}}</td>
+        <td>{{stats[1]["Passing_Completions"]}}</td>
+        <td>{{stats[1]["Passing_Attempts"]}}</td>
+        <td>{{stats[1]["Pass_Yards"]}}</td>
+        <td>{{stats[1]["Pass_TDs"]}}</td>
+        <td>{{stats[1]["Interceptions"]}}</td>
+        <td>{{stats[1]["Sacks_Allowed"]}}</td>
+        <td>{{stats[1]["Sacked_Yards"]}}</td>
+        <td>{{stats[1]["Fumbles"]}}</td>
+        <td>{{stats[1]["Time_Of_Possession"]}}</td>
+      </tr>
+    </table>
+{% endblock %}

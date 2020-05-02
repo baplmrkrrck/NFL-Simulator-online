@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Players</h1>
+		<table>
+    <tr>
+      <td>Player Name</td>
+			<td>Player Position</td>
+			<td>Player Team</td>
+      <td>Link to profile</td>
+		</tr>
+    {% for player in players %}
+		<tr>
+      <td>{{player.playername}}</td>
+			<td>{{player.playerposition}}</td>
+			<td>{{player.playerteam}}</td>
+      <td><a href="player?playerid={{player.pid}}">Profile</a></td>
+		</tr>
+    {% endfor %}
+	</table>
+{% endblock %}

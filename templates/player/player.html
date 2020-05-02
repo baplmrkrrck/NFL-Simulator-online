@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ player.playername }}</h1>
+		<table>
+		<tr>
+			<td><img src={{player.playerpicture}} alt="Profile Picture" height="42" width="42"></td>
+			<td>Postion: {{player.playerposition}}</td>
+			<td>Team: {{player.playerteam}}</td>
+		</tr>
+	</table>
+{% endblock %}

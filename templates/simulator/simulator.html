@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Choose teams</h1>
+		<form action="/runsim" method="GET">
+  			Home Team<br>
+  			<select name="hometeam">
+          {% for team in teams %}
+          <option value={{team.Team_Name}} >{{team.Team_Name}} {{team.Record}}</option>
+          {% endfor %}
+  			</select>
+        <select name="awayteam">
+          {% for team in teams %}
+          <option value={{team.Team_Name}} >{{team.Team_Name}} {{team.Record}}</option>
+          {% endfor %}
+  			</select>
+  			<br>
+			<input type="submit" value="Play Game"/>
+		</form>
+{% endblock %}

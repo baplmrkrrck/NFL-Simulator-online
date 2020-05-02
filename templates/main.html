@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Main menu</h1>
+	{% if msg %}
+      <div id="menumsg">
+		{{ msg }}
+	  </div>
+    {% endif %}
+	<br><br>
+	<a href="players">See Players</a><br>
+	<a href="simulator">Run Simulator</a><br>
+	<a href="history">View Matchup History</a><br>
+
+
+{% endblock %}

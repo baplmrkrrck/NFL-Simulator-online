@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Match ups</h1>
+		<table>
+    <tr>
+      <td>Home Team</td>
+			<td>Home Score</td>
+			<td>Away Team</td>
+      <td>Away Score</td>
+		</tr>
+    {% for match in matches %}
+		<tr>
+      <td>{{match.muteamone}}</td>
+			<td>{{match.muteamonescore}}</td>
+			<td>{{match.muteamtwo}}</td>
+      <td>{{match.muteamscore}}</td>
+      <td><a href="stats?matchid={{match.muid}}">Match Stats</a></td>
+		</tr>
+    {% endfor %}
+	</table>
+{% endblock %}
