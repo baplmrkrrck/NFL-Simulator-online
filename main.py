@@ -11,6 +11,8 @@ import pymysql,json,time
 
 from flask_session import Session  #serverside sessions
 
+#https://github.com/baplmrkrrck/NFL-Simulator-online
+
 app = Flask(__name__,static_url_path='')
 
 SESSION_TYPE = 'filesystem'
